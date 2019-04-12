@@ -1,0 +1,25 @@
+{
+  "name": "api-node",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node ./src/server.js",
+    "dev:watch": "nodemon --exec npm run dev",
+    "start": "npm run dev:watch",
+    "format": "prettier --single-quote --arrow-parens always --prose-wrap never --write './src/**/*.{js,json}'"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.merge": "^4.6.1",
+    "mongoose": "^5.5.1",
+    "morgan": "^1.9.1",
+    "serve-static": "^1.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11",
+    "prettier": "^1.16.4"
+  }
+}
