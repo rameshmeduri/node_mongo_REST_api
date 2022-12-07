@@ -28,23 +28,6 @@ app.use(express.urlencoded({ extended: false }));
 // API Endpoints
 app.use('/api', restRouter);
 
-if (config.currEnv === 'production') {
-  const staticPath = path.resolve(__dirname, '../../frontend/build');
-  app.use(
-    serveStatic(staticPath, {
-      maxAge: '0',
-      setHeaders: function (res, path) {
-        res.setHeader(
-          'Cache-Control',
-          'private, no-cache, no-store, must-revalidate'
-        );
-        res.setHeader('Expires', '-1');
-        res.setHeader('Pragma', 'no-cache');
-      }
-    })
-  );
-}
-
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   next({
