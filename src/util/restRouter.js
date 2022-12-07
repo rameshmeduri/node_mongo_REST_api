@@ -1,7 +1,7 @@
 const express = require('express');
-const schoolRouter = require('../resources/school/router');
+const employeeRouter = require('../resources/employee/router');
 const restRouter = express.Router();
 
-restRouter.use('/school', schoolRouter);
+restRouter.use('/employee', employeeRouter);
 
 module.exports = restRouter;

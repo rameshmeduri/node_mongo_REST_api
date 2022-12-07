@@ -4,4 +4,8 @@
 #### Tech
 > Node.js  
 > Express  
-> MongoDB  
+> MongoDB
+
+```bash
+npm run dev
+```

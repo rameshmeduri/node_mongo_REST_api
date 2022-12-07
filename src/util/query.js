@@ -36,7 +36,7 @@ const deleteOne = (model) => (req, res, next) => {
 const generateControllers = (model, overrides = {}) => {
   const defaults = {
     getAll: getAll(model),
-    getOne: getOne(model),        
+    getOne: getOne(model),
     createOne: createOne(model),
     updateOne: updateOne(model),
     deleteOne: deleteOne(model)

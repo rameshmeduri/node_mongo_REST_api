@@ -33,7 +33,7 @@ if (config.currEnv === 'production') {
   app.use(
     serveStatic(staticPath, {
       maxAge: '0',
-      setHeaders: function(res, path) {
+      setHeaders: function (res, path) {
         res.setHeader(
           'Cache-Control',
           'private, no-cache, no-store, must-revalidate'
@@ -63,6 +63,6 @@ app.use((err, req, res, next) => {
   res.status(err.status).json(error);
 });
 
-app.listen(config.port, () => {  
+app.listen(config.port, () => {
   console.log(`Server Listening on Port :: ${config.port}`);
 });
